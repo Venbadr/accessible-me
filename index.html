@@ -6,19 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accessible Me</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <!-- replacing font for better usage experience -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
+    <!-- adding skip links -->
+    <a href="#contact-section" class="skip-link">skip to contact</a>
+    <a href="#copyright" class="skip-link">skip to copyright</a>
+
     <div class="container">
-       <!-- adding ARIA role for site header  -->
-      <div class="site-header" role="banner">
-        <h1>Jam Box Studios</h1>
+      <!-- adding ARIA role for site header  -->
+      <!-- adding schema info -->
+      <div
+        class="site-header"
+        role="banner"
+        itemscope
+        itemtype="https://schema.org/LocalBusiness"
+      >
+        <h1 itemprop="name">Box Studios</h1>
         <!-- adding ARIA role for navs  -->
         <div class="main-nav" role="navigation">
           <ul>
@@ -29,10 +42,12 @@
           </ul>
         </div>
         <!-- fixing the img by adding alt -->
+        <!-- adding schema info -->
         <img
           src="https://placekitten.com/1200/900"
           class="banner"
           alt="banner"
+          itemprop="image"
         />
       </div>
       <!-- adding ARIA role for main -->
@@ -50,7 +65,7 @@
           fugit culpa voluptatibus, inventore eaque, eligendi voluptatum!
           Voluptate iusto error voluptatibus.
         </p>
-           <!-- adding ARIA role for owner  -->
+        <!-- adding ARIA role for owner  -->
         <div class="owner" role="complementary">
           <h1>Meet the owner</h1>
           <ul>
@@ -63,7 +78,7 @@
           <p>Jambox Studios 123 Guitar Road, Musicville, Danceistan B3T 0L0</p>
         </div>
         <!-- adding ARIA role for contact  -->
-        <div class="contact-section" role="region">
+        <div class="contact-section" role="region" id="contact-section">
           <h1>Contact Us</h1>
           <form action="thanks.html">
             <!-- fixing the labels -->
@@ -80,7 +95,9 @@
         </div>
       </div>
       <!-- adding ARIA role for footer  -->
-      <div class="site-footer" role="contentinfo">&copy; 2021 Jam Box Studios</div>
+      <div class="site-footer" role="contentinfo" id="copyright">
+        &copy; 2021 Jam Box Studios
+      </div>
     </div>
   </body>
 </html>
