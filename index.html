@@ -16,9 +16,11 @@
 
   <body>
     <div class="container">
-      <div class="site-header">
+       <!-- adding ARIA role for site header  -->
+      <div class="site-header" role="banner">
         <h1>Jam Box Studios</h1>
-        <div class="main-nav">
+        <!-- adding ARIA role for navs  -->
+        <div class="main-nav" role="navigation">
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Products</a></li>
@@ -33,7 +35,8 @@
           alt="banner"
         />
       </div>
-      <div class="main-content">
+      <!-- adding ARIA role for main -->
+      <div class="main-content" role="main">
         <h1>Welcome to Jam Box</h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
@@ -47,7 +50,8 @@
           fugit culpa voluptatibus, inventore eaque, eligendi voluptatum!
           Voluptate iusto error voluptatibus.
         </p>
-        <div class="owner">
+           <!-- adding ARIA role for owner  -->
+        <div class="owner" role="complementary">
           <h1>Meet the owner</h1>
           <ul>
             <li>Name: John Doe</li>
@@ -58,7 +62,8 @@
           <h1>Address</h1>
           <p>Jambox Studios 123 Guitar Road, Musicville, Danceistan B3T 0L0</p>
         </div>
-        <div class="contact-section">
+        <!-- adding ARIA role for contact  -->
+        <div class="contact-section" role="region">
           <h1>Contact Us</h1>
           <form action="thanks.html">
             <!-- fixing the labels -->
@@ -74,7 +79,8 @@
           </form>
         </div>
       </div>
-      <div class="site-footer">&copy; 2021 Jam Box Studios</div>
+      <!-- adding ARIA role for footer  -->
+      <div class="site-footer" role="contentinfo">&copy; 2021 Jam Box Studios</div>
     </div>
   </body>
 </html>
